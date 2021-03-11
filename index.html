@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IotLite</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="/css/vue.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'IOTLITE',
+      repo: '',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      loadNavbar: true,
+      coverpage: {
+        '/': '_cover.md',
+      },
+      plugins: [
+        function(hook, vm) {
+          hook.mounted(function() {
+            console.log(window.document.getElementsByClassName("cover")[0].id="cover");
+
+            particlesJS.load('cover', 'assets/particles.json', function() {
+              console.log('callback - particles.js config loaded');
+            });
+            // console.log("加载完成")
+            // Called after initial completion. Only trigger once, no arguments.
+          });
+        }
+      ]
+    }
+  </script>
+  <script src="/js/docsify.min.js"></script>
+
+  <script src="./js/particles.min.js"></script>
+  <style>
+    .cover .mask {
+      position: absolute;
+      z-index: 100;
+    }
+    .cover .cover-main {
+      position: absolute;
+      z-index: 100;
+    }
+    .particles-js-canvas-el {
+      position: absolute;
+      z-index: 2;
+    }
+  </style>
+</body>
+</html>
