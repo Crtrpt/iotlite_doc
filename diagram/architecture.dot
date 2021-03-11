@@ -1,0 +1,70 @@
+digraph G {
+   subgraph cluster_CTWING {
+		CTWING_adapter ;
+		label = "CTWING";
+	}
+   subgraph cluster_ALIIOT {
+		ALI_adapter ;
+		label = "ALIIOT";
+	}
+
+    subgraph cluster_MQTT {
+		MQTT_adapter ;
+		label = "MQTT";
+	}
+
+    subgraph cluster_HTTP {
+		HTTP_adapter ;
+		label = "HTTP";
+	}
+
+    subgraph cluster_TCP {
+		TCP_adapter ;
+		label = "TCP";
+	}
+
+	subgraph cluster_Application {
+		Application_Layer ;
+
+		Application_Layer->dashboard_app
+
+		Application_Layer->billing_app
+		label = "应用层";
+	}
+
+    subgraph cluster_IOTLITE {
+      	iotlite_agent_2->iotlite_group_agent;
+		iotlite_agent_1->iotlite_group_agent;
+        iotlite_agent->iotlite_group_agent;
+
+
+        iotlite_agent_2->Application_Layer;
+		iotlite_agent_1->Application_Layer;
+        iotlite_agent->Application_Layer;
+        iotlite_group_agent->Application_Layer;
+		label = "交互层";
+	}
+
+
+
+
+
+
+  device_0->gateway0->MQTT_adapter[dir="both"]
+  device_1->gateway1->HTTP_adapter[dir="both"]
+  device_2->gateway2->ALI_adapter[dir="both"]
+  device_3->gateway3->CTWING_adapter[dir="both"]
+  device_4->gateway4->TCP_adapter[dir="both"]
+
+  MQTT_adapter -> iotlite_agent_1[dir="both"]
+  HTTP_adapter -> iotlite_agent_1[dir="both"]
+  TCP_adapter->iotlite_agent_1[dir="both"]
+  ALI_adapter -> iotlite_agent_1[dir="both"]
+  CTWING_adapter->iotlite_agent_1[dir="both"]
+
+  MQTT_adapter -> iotlite_agent[dir="both"]
+  HTTP_adapter -> iotlite_agent[dir="both"]
+  TCP_adapter->iotlite_agent[dir="both"]
+  ALI_adapter -> iotlite_agent[dir="both"]
+  CTWING_adapter->iotlite_agent[dir="both"]
+}

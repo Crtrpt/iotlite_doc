@@ -1,0 +1,9 @@
+digraph G {
+    device->mqtt_adaptor[dir="both",label="协议适配器交互"]
+
+    mqtt_adaptor->mqtt_device_agent[dir="both",label="发送给设备agent 处理设备自身的逻辑"]
+
+    mqtt_device_agent->group_agent[dir="both",label="如果设备有属组 发送给属组 处理联动逻辑"]
+
+    group_agent->dash_agent[label="处理完逻辑之后分发"]
+}

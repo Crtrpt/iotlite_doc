@@ -1,21 +1,9 @@
 <!-- _navbar.md -->
-* [Home](/)
+* [首页](/)
 
-* [Case](case.md)
+* [案例](case.md)
 
-* Eco
-  * [Integrated](integrated.md)
-  * [Community Support](Support.md)
-  * [Enterprise Support](Enterprise.md)
+* [演示](demo.md)
 
-* [Demo](demo.md)  
-
-* [Doc](document.md)
-
-* Lang
-  * [English](/)
-  * [Chinese](/zh-cn/)
-  * [Japanese](/jp/)
-  * [Russian](/ru/)
-  * [Arabic](/ru/)
+* [文档](document.md)
   

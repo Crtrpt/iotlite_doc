@@ -1,8 +1,7 @@
 
 # IOTLITE
 
-### **Simple to use IoT platform**
+### **简单易用物联网平台**
 
-[download](download)
-[source code](https://github.com/Crtrpt/iotlite.git)
-[document](document)
+[源码](https://github.com/Crtrpt/iotlite.git)
+[文档](document)
