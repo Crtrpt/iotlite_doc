@@ -1,3 +1,15 @@
-```
-docsify serve .
-```
+* [使用文档](document.md)
+    * [架构](architecture.md)
+    * [产品](product.md)
+    * [设备](device.md)
+    * [分组](group.md)
+* [附录](addenda.md)
+    * [物模型](model.md)
+        * [属性](model/property.md)
+        * [事件](model/events.md)
+        * [控制](model/control.md)
+        * [报警](model/alarm.md)
+        * [指标](model/metric.md)
+    * [推送](push.md)
+        * [http](push/http.md)
+        * [mqtt](push/mqtt.md)
